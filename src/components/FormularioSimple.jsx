@@ -6,7 +6,7 @@ const FormularioSimple = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }, reset
   } = useForm();
 
   const onSubmit = (data) => {
@@ -16,6 +16,7 @@ const FormularioSimple = () => {
       "Los datos fueron enviados correctamente",
       "success"
     );
+    reset();
   };
 
   return (
